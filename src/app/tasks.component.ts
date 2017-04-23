@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Task } from './task';
-import { TaskService } from './task.service'
+import { TaskService } from './services/task.service'
 
 @Component({
   selector: 'my-tasks',
-  templateUrl: './tasks.component.html',
-  styleUrls: ['./tasks.component.css']
+  templateUrl: './views/tasks.component.html',
+  styleUrls: ['./styles/tasks.component.css']
 })
 
 export class TasksComponent implements OnInit {

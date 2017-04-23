@@ -1,0 +1,44 @@
+<!-- <button md-button [mdMenuTriggerFor]="menu">Menu</button> -->
+<!-- <md-menu #menu="mdMenu">
+  <button md-menu-item>Item 1</button>
+  <button md-menu-item>Item 2</button>
+</md-menu> -->
+<!-- <h1 md-dialog-title class="primary-color">hey title</h1>
+    <md-dialog-content class="accent-color">
+      hey this is the content of the dialog
+    </md-dialog-content>
+    <md-dialog-actions>
+      <button md-raised-button color="primary" md-dialog-close>
+        close button
+      </button>
+    </md-dialog-actions>
+<md-checkbox>Check me!</md-checkbox> -->
+<div class="grid grid-pad">
+</div>
+<div calss='navbar'>
+</div>
+
+<div class='container row'>
+  <div class='container-categories col l3 col s12'>
+
+  </div>
+
+  <div class='container-tasks col l6 col s12'>
+    <h3>Your tasks</h3>
+    <div class="collection">
+      <a *ngFor="let task of tasks" [routerLink]="['/detail', task.id]" href="#!" class="collection-item">
+        {{task.title}}
+      </a>
+    </div>
+  </div>
+
+  <div class='container-info col l3 col s12'>
+
+  </div>
+
+  <div>
+  </div>
+</div>
+
+<div class='footer'>
+</div>

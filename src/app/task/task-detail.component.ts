@@ -1,16 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit }        from '@angular/core';
 import { ActivatedRoute, Params }   from '@angular/router';
 import { Location }                 from '@angular/common';
 
-import { TaskService } from '../task.service';
+import { TaskService } from '../services/task.service'
 
 import { Task } from '../task';
 import 'rxjs/add/operator/switchMap';
 
 @Component({
   selector: 'task-detail',
-  templateUrl: './task-detail.component.html',
-  styleUrls: ['./task-detail.component.css']
+  templateUrl: '../views/task-detail.component.html',
+  styleUrls: ['../styles/task-detail.component.css']
 })
 
 

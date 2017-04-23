@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Task } from './task';
-import { TaskService } from './task.service'
+import { TaskService } from './services/task.service'
 
 @Component({
   selector: 'my-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  templateUrl: './views/dashboard.component.html',
+  styleUrls: ['./styles/dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
 
@@ -15,6 +15,6 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.taskService.getTasks()
-      .then(tasks => this.tasks = tasks.slice(1, 5));
+      .then(tasks => this.tasks = tasks);
   }
 }
