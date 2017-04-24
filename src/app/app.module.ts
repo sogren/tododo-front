@@ -5,11 +5,10 @@ import { HttpModule }     from '@angular/http';
 import { RouterModule }   from '@angular/router';
 
 import { AppComponent }            from './app.component';
-import { TaskDetailComponent }     from './task/task-detail.component';
-import { TasksComponent }          from './tasks.component';
-import { DashboardComponent }      from './dashboard.component';
+import { TaskDetailComponent }     from './task-detail/task-detail.component';
+import { TasksComponent }          from './tasks/tasks.component';
+import { DashboardComponent }      from './dashboard/dashboard.component';
 
-import { AuthComponent }                        from './auth.component';
 import { Angular2TokenService }    from 'angular2-token';
 
 import { AppRoutingModule }        from './app-routing.module';
@@ -21,7 +20,6 @@ import {
 @NgModule({
   declarations: [
     AppComponent,
-    AuthComponent,
     TaskDetailComponent,
     TasksComponent,
     DashboardComponent

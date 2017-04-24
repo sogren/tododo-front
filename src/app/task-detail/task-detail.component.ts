@@ -9,8 +9,8 @@ import 'rxjs/add/operator/switchMap';
 
 @Component({
   selector: 'task-detail',
-  templateUrl: '../views/task-detail.component.html',
-  styleUrls: ['../styles/task-detail.component.css']
+  templateUrl: './task-detail.component.html',
+  styleUrls: ['./task-detail.component.css']
 })
 
 

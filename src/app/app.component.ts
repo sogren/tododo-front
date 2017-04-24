@@ -6,8 +6,8 @@ import { Angular2TokenService }    from 'angular2-token';
 @Component({
   selector: 'app-root',
   providers: [TaskService],
-  templateUrl: './views/app.component.html',
-  styleUrls: ['./styles/app.component.css']
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 
 export class AppComponent {
