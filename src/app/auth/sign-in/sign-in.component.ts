@@ -13,7 +13,7 @@ export class SignInComponent {
     constructor(private _tokenService: Angular2TokenService) {
       this._tokenService.init({
         apiBase:'http://localhost:3000',
-        signInRedirect: '/dashboard'
+        signInRedirect: 'dashboard'
       });
     }
 
