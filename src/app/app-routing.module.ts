@@ -4,11 +4,19 @@ import { DashboardComponent }   from './dashboard.component';
 import { AuthComponent }        from './auth.component';
 import { TaskDetailComponent }  from './task/task-detail.component';
 import { TasksComponent }       from './tasks.component';
+import { AuthTokenComponent }   from './auth';
+import { SignInComponent }      from './auth';
+import { RegisterComponent }    from './auth';
+import { ChangePasswordComponent }   from './auth';
+import { SignOutComponent }     from './auth';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard',  component: DashboardComponent },
-  { path: 'sign_up',    component: AuthComponent },
+  { path: 'sign-in',    component: SignInComponent },
+  { path: 'register',   component: RegisterComponent },
+  { path: 'change-password', component: ChangePasswordComponent },
+  { path: 'sign-out',   component: SignOutComponent },
   { path: 'detail/:id', component: TaskDetailComponent },
   { path: 'tasks',      component: TasksComponent }
 ];

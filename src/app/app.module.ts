@@ -8,9 +8,15 @@ import { AppComponent }            from './app.component';
 import { TaskDetailComponent }     from './task/task-detail.component';
 import { TasksComponent }          from './tasks.component';
 import { DashboardComponent }      from './dashboard.component';
-import { AuthComponent }           from './auth.component';
+
+import { AuthComponent }                        from './auth.component';
+import { Angular2TokenService }    from 'angular2-token';
 
 import { AppRoutingModule }        from './app-routing.module';
+
+import {
+    AuthTokenModule
+} from './auth';
 
 @NgModule({
   declarations: [
@@ -21,13 +27,14 @@ import { AppRoutingModule }        from './app-routing.module';
     DashboardComponent
   ],
   imports: [
+    AuthTokenModule,
     BrowserModule,
     FormsModule,
     HttpModule,
     AppRoutingModule
   ],
 
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ Angular2TokenService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

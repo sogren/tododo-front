@@ -1,0 +1,39 @@
+<div class="row">
+	<div class="col offset-l3 l6 offset-m2 m8 s12 center-align">
+		<h4 class="card-title">Register</h4>
+
+		<form #registerForm="ngForm" (ngSubmit)="onSubmit()" class="col s12">
+			<div class="input-field">
+				<label for="formGroupExampleInput">Email</label>
+				<input type="email"
+					class="validate"
+				  id="email"
+					required
+					[(ngModel)]="registerData.email"
+					name="email">
+			</div>
+			<div class="input-field">
+				<label for="formGroupExampleInput">Password</label>
+				<input type="password"
+					class="validate"
+				  id="password"
+					required
+					[(ngModel)]="registerData.password"
+					name="password">
+			</div>
+			<div class="input-field">
+				<label for="formGroupExampleInput">Password Confirmation</label>
+				<input type="password"
+					class="validate"
+				  id="password-confirmation"
+					required
+					[(ngModel)]="registerData.passwordConfirmation"
+					name="passwordConfirmation">
+			</div>
+			<button
+				type="submit"
+				class="btn btn-primary center-align"
+				[disabled]="!registerForm.form.valid">Register</button>
+		</form>
+	</div>
+</div>
