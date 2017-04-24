@@ -10,7 +10,7 @@ import { Angular2TokenService } from 'angular2-token';
 export class AuthTokenComponent {
 
     constructor(public tokenService: Angular2TokenService) {
-        this.tokenService.init();
+        this.tokenService.init({apiBase:'http://localhost:3000'});
     }
 
 }

@@ -10,7 +10,12 @@ export class SignInComponent {
     signInData: SignInData = <SignInData>{};
     output: any;
 
-    constructor(private _tokenService: Angular2TokenService) { }
+    constructor(private _tokenService: Angular2TokenService) {
+      this._tokenService.init({
+        apiBase:'http://localhost:3000',
+        signInRedirect: '/dashboard'
+      });
+    }
 
     // Submit Data to Backend
     onSubmit() {
