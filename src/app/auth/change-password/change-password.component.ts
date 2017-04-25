@@ -11,9 +11,9 @@ export class ChangePasswordComponent {
     updatePasswordData: UpdatePasswordData = <UpdatePasswordData>{};
     output:             any;
 
-    constructor(private _tokenService: Angular2TokenService) {
-      this._tokenService.init({apiBase:'http://localhost:3000'});
-    }
+    constructor(
+      private _tokenService: Angular2TokenService
+    ) { }
 
     // Submit Data to Backend
     onSubmit() {

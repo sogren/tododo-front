@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Angular2TokenService, SignInData } from 'angular2-token';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'sign-in',
@@ -10,12 +11,10 @@ export class SignInComponent {
     signInData: SignInData = <SignInData>{};
     output: any;
 
-    constructor(private _tokenService: Angular2TokenService) {
-      this._tokenService.init({
-        apiBase:'http://localhost:3000',
-        signInRedirect: 'dashboard'
-      });
-    }
+    constructor(
+      private _tokenService: Angular2TokenService,
+      private router: Router
+    ) { }
 
     // Submit Data to Backend
     onSubmit() {
@@ -26,6 +25,7 @@ export class SignInComponent {
             res => {
                 this.signInData     = <SignInData>{};
                 this.output         = res;
+                this.router.navigate(['/dashboard']);
             }, error => {
                 this.signInData     = <SignInData>{};
                 this.output         = error;

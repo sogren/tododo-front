@@ -1,19 +1,17 @@
 import { Component } from '@angular/core';
-import { Task } from './task';
-import { TaskService } from './services/task.service'
 import { Angular2TokenService }    from 'angular2-token';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
-  providers: [TaskService],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 
 export class AppComponent {
-  title = 'what the fuck!';
-
-  constructor(public tokenService: Angular2TokenService) {
-    this.tokenService.init();
+  constructor(private tokenService: Angular2TokenService) {
+    this.tokenService.init({
+      apiBase: 'http://localhost:3000'
+    });
   }
 }

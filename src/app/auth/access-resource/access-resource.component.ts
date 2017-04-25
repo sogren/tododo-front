@@ -3,10 +3,10 @@ import { Component, OnInit } from '@angular/core';
 import { Angular2TokenService } from 'angular2-token';
 
 @Component({
-    selector: 'sign-out',
-    templateUrl: 'sign-out.component.html'
+    selector: 'access-resource',
+    templateUrl: 'access-resource.component.html'
 })
-export class SignOutComponent {
+export class AccessResourceComponent {
 
     output: any;
 
@@ -18,7 +18,8 @@ export class SignOutComponent {
     onSubmit() {
 
         this.output = null;
-        this._tokenService.signOut().subscribe(
+
+        this._tokenService.get('private_resource').subscribe(
             res => this.output      = res,
             error => this.output    = error
         );

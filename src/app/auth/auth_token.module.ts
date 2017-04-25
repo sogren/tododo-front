@@ -12,22 +12,24 @@ import {
     SignInComponent,
     SignOutComponent,
     ChangePasswordComponent,
+    AccessResourceComponent,
     ValidateTokenComponent
 } from './';
 
 @NgModule({
     imports: [
         CommonModule,
+        HttpModule,
         FormsModule,
         RouterModule
     ],
     declarations: [
         AuthTokenComponent,
-
         RegisterComponent,
         SignInComponent,
         ChangePasswordComponent,
         SignOutComponent,
+        AccessResourceComponent,
         ValidateTokenComponent
     ],
     exports: [

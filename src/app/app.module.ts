@@ -10,6 +10,7 @@ import { TasksComponent }          from './tasks/tasks.component';
 import { DashboardComponent }      from './dashboard/dashboard.component';
 
 import { Angular2TokenService }    from 'angular2-token';
+import { TaskService } from './services/task.service'
 
 import { AppRoutingModule }        from './app-routing.module';
 
@@ -29,10 +30,14 @@ import {
     BrowserModule,
     FormsModule,
     HttpModule,
+    RouterModule,
     AppRoutingModule
   ],
 
-  providers: [ Angular2TokenService ],
+  providers: [
+    Angular2TokenService,
+    TaskService
+  ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
