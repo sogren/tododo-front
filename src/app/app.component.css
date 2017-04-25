@@ -2,6 +2,11 @@
 .main-navbar{
   padding: 0 150px;
 }
+@media screen and (max-width: 800px){
+  .main-navbar{
+    padding: 0;
+  }
+}
 
 /*h1 {
   font-size: 1.2em;

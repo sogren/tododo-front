@@ -1,14 +1,17 @@
+<toaster-container></toaster-container>
 <nav class="main-navbar">
   <div class="nav-wrapper">
-    <a href="#" class="brand-logo right">Todo</a>
-    <ul id="nav-mobile" class="left hide-on-med-and-down">
-      <li><a routerLink="/sign-in" routerLinkActive="active">Sign in</a></li>
-      <li><a routerLink="/register" routerLinkActive="active">Register</a></li>
-      <li><a routerLink="/change-password" routerLinkActive="active">Change Password</a></li>
-      <li><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
-      <li><a routerLink="/tasks" routerLinkActive="active">Tasks</a></li>
-      <li><sign-out></sign-out></li>
+    <ul id="nav-mobile" class="left">
+      <li *ngIf="this.tokenService.userSignedIn()"><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
+      <li *ngIf="this.tokenService.userSignedIn()"><a routerLink="/tasks" routerLinkActive="active">Tasks</a></li>
+    </ul>
+    <ul id="nav-mobile" class="right">
+      <li *ngIf="!this.tokenService.userSignedIn()"><a routerLink="/sign-in" routerLinkActive="active">Sign in</a></li>
+      <li *ngIf="!this.tokenService.userSignedIn()"><a routerLink="/register" routerLinkActive="active">Register</a></li>
+      <li *ngIf="this.tokenService.userSignedIn()"><a routerLink="/change-password" routerLinkActive="active">Change Password</a></li>
+      <li *ngIf="this.tokenService.userSignedIn()"><sign-out></sign-out></li>
     </ul>
   </div>
 </nav>
+<!-- <span (click)="popToast()">sdfgsdf</span> -->
 <router-outlet></router-outlet>

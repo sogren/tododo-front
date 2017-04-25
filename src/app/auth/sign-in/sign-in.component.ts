@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class SignInComponent {
 
     signInData: SignInData = <SignInData>{};
+    output2 = 'any';
     output: any;
 
     constructor(

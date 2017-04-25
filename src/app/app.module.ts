@@ -12,6 +12,8 @@ import { DashboardComponent }      from './dashboard/dashboard.component';
 import { Angular2TokenService }    from 'angular2-token';
 import { TaskService } from './services/task.service'
 
+import {ToasterModule, ToasterService} from 'angular2-toaster';
+
 import { AppRoutingModule }        from './app-routing.module';
 
 import {
@@ -31,6 +33,7 @@ import {
     FormsModule,
     HttpModule,
     RouterModule,
+    ToasterModule,
     AppRoutingModule
   ],
 
