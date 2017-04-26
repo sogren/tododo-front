@@ -1,6 +1,6 @@
 <div class='task-container collection '>
-  <div class='task-button-done valign-wrapper' (click)="changeTaskStatus(task.id)">
-    <input type="checkbox" id="task-checkbox-{{task.id}}" />
+  <div class='task-button-done valign-wrapper'>
+    <input type="checkbox" id="task-checkbox-{{task.id}}" (click)="changeTaskStatus(task.id)" [attr.checked]="task.status == 'done' ? 'checked' : null" />
     <label for="task-checkbox-{{task.id}}"></label>
   </div>
 

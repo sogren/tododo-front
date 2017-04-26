@@ -9,12 +9,12 @@ import 'rxjs/add/operator/switchMap';
 
 @Component({
   selector: 'task-detail',
-  templateUrl: './task-detail.component.html',
-  styleUrls: ['./task-detail.component.css']
+  templateUrl: './task-edit.component.html',
+  styleUrls: ['./task-edit.component.css']
 })
 
 
-export class TaskDetailComponent implements OnInit {
+export class TaskEditComponent implements OnInit {
   task: Task;
   
   constructor(
