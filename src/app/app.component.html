@@ -2,8 +2,8 @@
 <nav class="main-navbar">
   <div class="nav-wrapper">
     <ul id="nav-mobile" class="left">
+      <li *ngIf="this.tokenService.userSignedIn()"><a routerLink="/new-task" routerLinkActive="active">New Task</a></li>
       <li *ngIf="this.tokenService.userSignedIn()"><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
-      <li *ngIf="this.tokenService.userSignedIn()"><a routerLink="/tasks" routerLinkActive="active">Tasks</a></li>
     </ul>
     <ul id="nav-mobile" class="right">
       <li *ngIf="!this.tokenService.userSignedIn()"><a routerLink="/sign-in" routerLinkActive="active">Sign in</a></li>

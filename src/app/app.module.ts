@@ -7,7 +7,8 @@ import { RouterModule }   from '@angular/router';
 import { AppComponent }            from './app.component';
 import { TaskDetailComponent }     from './task-detail/task-detail.component';
 import { TasksComponent }          from './tasks/tasks.component';
-import { TaskComponent }          from './task/task.component';
+import { TaskComponent }           from './task/task.component';
+import { TaskNewComponent }        from './task-new/task-new.component';
 import { DashboardComponent }      from './dashboard/dashboard.component';
 
 import { Angular2TokenService }    from 'angular2-token';
@@ -27,7 +28,8 @@ import {
     TaskDetailComponent,
     TasksComponent,
     TaskComponent,
-    DashboardComponent
+    DashboardComponent,
+    TaskNewComponent
   ],
   imports: [
     AuthTokenModule,

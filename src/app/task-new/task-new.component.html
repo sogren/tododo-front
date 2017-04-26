@@ -1,30 +1,29 @@
 <div class="row">
 	<div class="col offset-l3 l6 offset-m2 m8 s12 center-align">
-		<h4 class="card-title">Sign In</h4>
+		<h4 class="card-title">New Task</h4>
 
-		<form #signInForm="ngForm" (ngSubmit)="onSubmit()" class="col s12">
+		<form #signInForm="ngForm" (ngSubmit)="newTask(task)" class="col s12">
 			<div class="input-field">
-				<label for="formGroupExampleInput">Email</label>
-				<input type="email"
+				<label for="title">Title</label>
+				<input type="text"
 					class="validate"
-				  id="email"
+				  id="title"
 					required
-					[(ngModel)]="signInData.email"
+					[(ngModel)]="task.title"
 					name="email">
 			</div>
 			<div class="input-field">
-				<label for="formGroupExampleInput">Password</label>
-				<input type="password"
-					class="validate"
-				  id="password"
+				<label for="content">Content</label>
+				<textarea type="text"
+					class="validate materialize-textarea"
+				  id="content"
 					required
-					[(ngModel)]="signInData.password"
-					name="password">
+					[(ngModel)]="task.content"
+					name="password"></textarea>
 			</div>
-			<button
-				type="submit"
+			<button type="submit"
 				class="btn btn-primary"
-				[disabled]="!signInForm.form.valid">Sign In</button>
+				[disabled]="!signInForm.form.valid">Create Task</button>
 		</form>
 	</div>
 </div>

@@ -36,7 +36,7 @@ export class TaskService {
                .catch(this.handleError);
   }
 
-  createTask(task): Promise<Task[]> {
+  newTask(task): Promise<Task[]> {
     const url = `api/tasks/`;
     return this.tokenService.post(url, task)
                .toPromise()
