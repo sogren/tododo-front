@@ -1,0 +1,25 @@
+
+.task-link{
+  display: inline-block !important;
+  vertical-align: middle;
+  width: 68%;
+  border: none;
+}
+.task-button-done{
+  display: inline-block !important;
+  vertical-align: middle;
+  width: 10%;
+  text-align: center;
+}
+.task-button-done label{
+  vertical-align: middle;
+  padding-left: 20px;
+}
+.task-actions{
+  display: inline-block !important;
+  vertical-align: middle;
+  width: 20%;
+}
+.task-actions i{
+  margin: 0;
+}

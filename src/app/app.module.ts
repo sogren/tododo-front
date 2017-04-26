@@ -7,6 +7,7 @@ import { RouterModule }   from '@angular/router';
 import { AppComponent }            from './app.component';
 import { TaskDetailComponent }     from './task-detail/task-detail.component';
 import { TasksComponent }          from './tasks/tasks.component';
+import { TaskComponent }          from './task/task.component';
 import { DashboardComponent }      from './dashboard/dashboard.component';
 
 import { Angular2TokenService }    from 'angular2-token';
@@ -25,6 +26,7 @@ import {
     AppComponent,
     TaskDetailComponent,
     TasksComponent,
+    TaskComponent,
     DashboardComponent
   ],
   imports: [

@@ -1,0 +1,15 @@
+<div class='task-container collection '>
+  <div class='task-button-done valign-wrapper' (click)="changeTaskStatus(task.id)">
+    <input type="checkbox" id="task-checkbox-{{task.id}}" />
+    <label for="task-checkbox-{{task.id}}"></label>
+  </div>
+
+  <a [routerLink]="['/detail', task.id]" href="#!" class="collection-item task-link valign-wrapper">
+    {{task.title}}
+  </a>
+
+  <div class='task-actions valign-wrapper'>
+    <i class="material-icons right">delete</i>
+    <i class="material-icons right">mode_edit</i>
+  </div>
+</div>

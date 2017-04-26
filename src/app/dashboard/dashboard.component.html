@@ -9,19 +9,9 @@
   </div>
 
   <div class='container-tasks col l6 col s12'>
-    <h3>Your tasks</h3>
-    <div class="collection">
-      <a *ngFor="let task of tasks" [routerLink]="['/detail', task.id]" href="#!" class="collection-item">
-
-        <p>
-          <input type="checkbox" id="test5" />
-          <label for="test5">Red</label>
-        </p>
-        <!-- <i class="material-icons right">done</i> -->
-        <i class="material-icons right">delete</i>
-        <!-- <i class="material-icons right">clear</i> -->
-        {{task.title}}
-      </a>
+    <h3>Tasks list</h3>
+    <div *ngFor="let task of tasks">
+      <task [task]="task"></task>
     </div>
   </div>
 

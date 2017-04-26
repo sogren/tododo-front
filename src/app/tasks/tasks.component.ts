@@ -12,7 +12,8 @@ import { TaskService } from '../services/task.service'
 export class TasksComponent implements OnInit {
   constructor(
     private router: Router,
-    private taskService: TaskService) { }
+    private taskService: TaskService
+  ) { }
   tasks: Task[];
   selectedTask: Task;
   task: Task = {
