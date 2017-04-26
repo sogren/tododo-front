@@ -1,14 +1,30 @@
-<div class='container row'>
-  <div class='container-categories col l3 col s12'>
+<div class="row">
+	<div class="col offset-l3 l6 offset-m2 m8 s12 center-align">
+		<h4 class="card-title">Sign In</h4>
 
-  </div>
-
-  <div *ngIf="task" class='container-tasks col l6 col s12 task-info-container'>
-    <h2>{{task.title}}</h2>
-    <h6>{{task.content}}</h6>
-    <div class='button-container'>
-      <button class='btn col s3 offset-s2' (click)="goBack()">Back</button>
-      <button class='btn col s3 offset-s1' (click)="goBack()">Edit</button>
-    </div>
-  </div>
+		<form #signInForm="ngForm" (ngSubmit)="onSubmit()" class="col s12">
+			<div class="input-field">
+				<label for="formGroupExampleInput">Email</label>
+				<input type="email"
+					class="validate"
+				  id="email"
+					required
+					[(ngModel)]="signInData.email"
+					name="email">
+			</div>
+			<div class="input-field">
+				<label for="formGroupExampleInput">Password</label>
+				<input type="password"
+					class="validate"
+				  id="password"
+					required
+					[(ngModel)]="signInData.password"
+					name="password">
+			</div>
+			<button
+				type="submit"
+				class="btn btn-primary"
+				[disabled]="!signInForm.form.valid">Sign In</button>
+		</form>
+	</div>
 </div>

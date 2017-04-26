@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Task }       from '../task';
-import { TASKS }      from '../seeds/mock-tasks';
 import { HttpModule } from '@angular/http';
 import { Angular2TokenService } from 'angular2-token';
 
@@ -30,7 +29,7 @@ export class TaskService {
   }
 
   changeTaskStatus(id: number): Promise<Task[]> {
-    const url = `api/tasks/${id}`;
+    const url = `api/change_task_status/${id}`;
     return this.tokenService.get(url)
                .toPromise()
                .then(response => response.json() as Task[])
