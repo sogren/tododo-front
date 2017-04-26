@@ -1,4 +1,4 @@
-import { Component }        from '@angular/core';
+import { Component, OnInit }        from '@angular/core';
 import { ActivatedRoute, Params }   from '@angular/router';
 import { Location }                 from '@angular/common';
 import { Router } from '@angular/router';
@@ -9,13 +9,13 @@ import { Task } from '../task';
 import 'rxjs/add/operator/switchMap';
 
 @Component({
-  selector: 'task-new',
-  templateUrl: './task-new.component.html',
-  styleUrls: ['./task-new.component.css']
+  selector: 'task-edit',
+  templateUrl: './task-edit.component.html',
+  styleUrls: ['./task-edit.component.css']
 })
 
 
-export class TaskNewComponent {
+export class TaskEditComponent implements OnInit {
   task: Task = new Task;
 
   constructor(
@@ -25,15 +25,22 @@ export class TaskNewComponent {
     private router: Router
   ) {}
 
+  ngOnInit(): void {
+    this.route.params
+      .switchMap((params: Params) => this.taskService.getTask(+params['id']))
+      .subscribe(task => this.task = task);
+  }
+
   goBack(): void {
     this.location.back();
   }
 
-  newTask(task): void {
-    this.taskService.newTask(task).then(
+  editTask(task): void {
+    console.log(task.id)
+    this.taskService.editTask(task.id, task).then(
       res => {
         if(res){
-          this.router.navigate(['/dashboard']);
+          this.router.navigate([`/detail/${task.id}`]);
         }
       }
     );

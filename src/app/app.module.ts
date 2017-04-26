@@ -9,6 +9,7 @@ import { TaskDetailComponent }     from './task-detail/task-detail.component';
 import { TasksComponent }          from './tasks/tasks.component';
 import { TaskComponent }           from './task/task.component';
 import { TaskNewComponent }        from './task-new/task-new.component';
+import { TaskEditComponent }       from './task-edit/task-edit.component';
 import { DashboardComponent }      from './dashboard/dashboard.component';
 
 import { Angular2TokenService }    from 'angular2-token';
@@ -29,7 +30,8 @@ import {
     TasksComponent,
     TaskComponent,
     DashboardComponent,
-    TaskNewComponent
+    TaskNewComponent,
+    TaskEditComponent
   ],
   imports: [
     AuthTokenModule,

@@ -8,7 +8,7 @@
     <h6>{{task.content}}</h6>
     <div class='button-container'>
       <button class='btn col s3 offset-s2' (click)="goBack()">Back</button>
-      <button class='btn col s3 offset-s1' (click)="goBack()">Edit</button>
+      <a class='btn col s3 offset-s1'  href="#!" [routerLink]="['/edit-task', task.id]" >Edit</a>
     </div>
   </div>
 </div>

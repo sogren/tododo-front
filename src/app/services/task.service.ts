@@ -28,35 +28,35 @@ export class TaskService {
                .catch(this.handleError);
   }
 
-  changeTaskStatus(id: number): Promise<Task[]> {
+  changeTaskStatus(id: number): Promise<any> {
     const url = `api/change_task_status/${id}`;
     return this.tokenService.get(url)
                .toPromise()
-               .then(response => response.json() as Task[])
+               .then(response => response)
                .catch(this.handleError);
   }
 
-  newTask(task): Promise<Task[]> {
+  newTask(task): Promise<Task> {
     const url = `api/tasks/`;
     return this.tokenService.post(url, task)
                .toPromise()
-               .then(response => response.json() as Task[])
+               .then(response => response.json() as Task)
                .catch(this.handleError);
   }
 
-  editTask(id: number, task): Promise<Task[]> {
-    const url = `api/tasks/${id}/edit`;
+  editTask(id: number, task): Promise<any> {
+    const url = `api/tasks/${id}`;
     return this.tokenService.put(url, task)
                .toPromise()
-               .then(response => response.json() as Task[])
+               .then(response => response)
                .catch(this.handleError);
   }
 
-  deleteTask(id: number): Promise<Task[]> {
+  deleteTask(id: number): Promise<any> {
     const url = `api/tasks/${id}`;
-    return this.tokenService.get(url)
+    return this.tokenService.delete(url)
                .toPromise()
-               .then(response => response.json() as Task[])
+               .then(response => response)
                .catch(this.handleError);
   }
 

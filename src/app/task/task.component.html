@@ -1,4 +1,4 @@
-<div class='task-container collection '>
+<div *ngIf='task' class='task-container collection '>
   <div class='task-button-done valign-wrapper'>
     <input type="checkbox" id="task-checkbox-{{task.id}}" (click)="changeTaskStatus(task.id)" [attr.checked]="task.status == 'done' ? 'checked' : null" />
     <label for="task-checkbox-{{task.id}}"></label>
@@ -9,7 +9,7 @@
   </a>
 
   <div class='task-actions valign-wrapper'>
-    <i class="material-icons right">delete</i>
-    <i class="material-icons right">mode_edit</i>
+    <i (click)="deleteTask(task.id)" class="material-icons right">delete</i>
+    <i href="#!" [routerLink]="['/edit-task', task.id]" class="material-icons right">mode_edit</i>
   </div>
 </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Angular2TokenService, RegisterData } from 'angular2-token';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'register',
@@ -12,7 +13,8 @@ export class RegisterComponent {
     output: any;
 
     constructor(
-      private _tokenService: Angular2TokenService
+      private _tokenService: Angular2TokenService,
+      private router: Router
     ) { }
 
     // Submit Data to Backend
@@ -23,9 +25,11 @@ export class RegisterComponent {
         this._tokenService.registerAccount(this.registerData).subscribe(
             res => {
                 this.registerData  = <RegisterData>{};
+                this.router.navigate(['/dashboard']);
                 this.output        = res;
             }, error => {
                 this.registerData  = <RegisterData>{};
+                this.router.navigate(['/dashboard']);
                 this.output        = error;
             }
         );

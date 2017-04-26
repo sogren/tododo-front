@@ -5,6 +5,7 @@ import { DashboardComponent }   from './dashboard/dashboard.component';
 import { TaskDetailComponent }  from './task-detail/task-detail.component';
 import { TasksComponent }       from './tasks/tasks.component';
 import { TaskNewComponent }       from './task-new/task-new.component';
+import { TaskEditComponent }       from './task-edit/task-edit.component';
 
 import { SignInComponent,
          RegisterComponent,
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'detail/:id', component: TaskDetailComponent },
   { path: 'tasks',      component: TasksComponent },
   { path: 'new-task',        component: TaskNewComponent },
+  { path: 'edit-task/:id',       component: TaskEditComponent },
   { path: 'sign-in',         component: SignInComponent },
   { path: 'register',        component: RegisterComponent },
   { path: 'change-password', component: ChangePasswordComponent },

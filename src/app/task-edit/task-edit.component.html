@@ -1,10 +1,10 @@
 <div class="row">
 	<div class="col offset-l3 l6 offset-m2 m8 s12 center-align">
-		<h4 class="card-title">New Task</h4>
+		<h4 class="card-title">Edit Task</h4>
 
-		<form #newTaskForm="ngForm" (ngSubmit)="newTask(task)" class="col s12">
+		<form #editTaskForm="ngForm" (ngSubmit)="editTask(task)" class="col s12">
 			<div class="input-field">
-				<label for="title">Title</label>
+				<label for="title" [class.active]="task">Title</label>
 				<input type="text"
 					class="validate"
 				  id="title"
@@ -13,16 +13,17 @@
 					name="email">
 			</div>
 			<div class="input-field">
-				<label for="content">Content</label>
+				<label for="content" [class.active]="task">Content</label>
 				<textarea type="text"
 					class="validate materialize-textarea"
 				  id="content"
 					[(ngModel)]="task.content"
 					name="password"></textarea>
 			</div>
+			<button class="btn btn-primary" (click)="goBack()">Go back</button>
 			<button type="submit"
 				class="btn btn-primary"
-				[disabled]="!newTaskForm.form.valid">Create Task</button>
+				[disabled]="!editTaskForm.form.valid">Update Task</button>
 		</form>
 	</div>
 </div>
