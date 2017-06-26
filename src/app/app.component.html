@@ -2,14 +2,14 @@
 <nav class="main-navbar">
   <div class="nav-wrapper">
     <ul id="nav-mobile" class="left">
-      <li *ngIf="this.tokenService.userSignedIn()"><a routerLink="/new-task" routerLinkActive="active">New Task</a></li>
+      <li *ngIf="this.tokenService.userSignedIn()"><a routerLink="/tasks/new" routerLinkActive="active">New Task </a></li>
       <li *ngIf="this.tokenService.userSignedIn()"><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
     </ul>
     <ul id="nav-mobile" class="right">
-      <li *ngIf="!this.tokenService.userSignedIn()"><a routerLink="/sign-in" routerLinkActive="active">Sign in</a></li>
-      <li *ngIf="!this.tokenService.userSignedIn()"><a routerLink="/register" routerLinkActive="active">Register</a></li>
-      <li *ngIf="this.tokenService.userSignedIn()"><a routerLink="/change-password" routerLinkActive="active">Change Password</a></li>
-      <li *ngIf="this.tokenService.userSignedIn()"><sign-out></sign-out></li>
+      <li *ngIf="!this.tokenService.userSignedIn()"><a routerLink="/sign-in"         routerLinkActive="active">Sign in        </a></li>
+      <li *ngIf="!this.tokenService.userSignedIn()"><a routerLink="/register"        routerLinkActive="active">Register       </a></li>
+      <li *ngIf="this.tokenService.userSignedIn() "><a routerLink="/change-password" routerLinkActive="active">Change Password</a></li>
+      <li *ngIf="this.tokenService.userSignedIn() "><sign-out></sign-out></li>
     </ul>
   </div>
 </nav>

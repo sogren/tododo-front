@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Task } from '../task';
+import { Task } from './task';
 import { TaskService } from '../services/task.service'
 
 @Component({
@@ -9,7 +9,7 @@ import { TaskService } from '../services/task.service'
   styleUrls: ['./tasks.component.css']
 })
 
-export class TasksComponent implements OnInit {
+export class TasksComponent  {
   constructor(
     private router: Router,
     private taskService: TaskService

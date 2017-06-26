@@ -5,36 +5,26 @@ import { HttpModule }     from '@angular/http';
 import { RouterModule }   from '@angular/router';
 
 import { AppComponent }            from './app.component';
-import { TaskDetailComponent }     from './task-detail/task-detail.component';
-import { TasksComponent }          from './tasks/tasks.component';
-import { TaskComponent }           from './task/task.component';
-import { TaskNewComponent }        from './task-new/task-new.component';
-import { TaskEditComponent }       from './task-edit/task-edit.component';
 import { DashboardComponent }      from './dashboard/dashboard.component';
 
 import { Angular2TokenService }    from 'angular2-token';
 import { TaskService } from './services/task.service'
 
-import {ToasterModule, ToasterService} from 'angular2-toaster';
+import { ToasterModule, ToasterService } from 'angular2-toaster';
 
 import { AppRoutingModule }        from './app-routing.module';
 
-import {
-    AuthTokenModule
-} from './auth';
+import { AuthTokenModule } from './auth';
+import { TasksModule }     from './tasks';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TaskDetailComponent,
-    TasksComponent,
-    TaskComponent,
-    DashboardComponent,
-    TaskNewComponent,
-    TaskEditComponent
+    DashboardComponent
   ],
   imports: [
     AuthTokenModule,
+    TasksModule,
     BrowserModule,
     FormsModule,
     HttpModule,

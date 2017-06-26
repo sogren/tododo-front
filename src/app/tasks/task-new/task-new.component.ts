@@ -3,15 +3,14 @@ import { ActivatedRoute, Params }   from '@angular/router';
 import { Location }                 from '@angular/common';
 import { Router } from '@angular/router';
 
-import { TaskService } from '../services/task.service'
+import { TaskService } from '../../services/task.service'
 
 import { Task } from '../task';
 import 'rxjs/add/operator/switchMap';
 
 @Component({
   selector: 'task-new',
-  templateUrl: './task-new.component.html',
-  styleUrls: ['./task-new.component.css']
+  templateUrl: './task-new.component.html'
 })
 
 

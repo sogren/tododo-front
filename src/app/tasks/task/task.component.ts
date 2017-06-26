@@ -1,5 +1,5 @@
 import { Component, Input }        from '@angular/core';
-import { TaskService } from '../services/task.service'
+import { TaskService } from '../../services/task.service'
 import { Task } from '../task';
 import {ToasterModule, ToasterService} from 'angular2-toaster';
 
